@@ -1,0 +1,41 @@
+.titre{
+    text-align: center;
+    background-color: darkred;
+    color:white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    
+}
+.all{
+    background-color: grey;
+    height: 10%;
+    
+}
+
+.doss{
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    color: white;
+    width: 20%;
+    
+}
+.ok{
+    background-color: darkred;
+    height: 500px;;
+    width: 100%; 
+}
+
+.fich{
+   color: white;
+   width: 20%;
+}
+.corpsdoss{
+    background-color: grey;
+    height: 96.5%;
+    border:8px solid darkred;
+}
+.corpsfich{
+    background-color: grey;
+    height: 96.5%;
+    border: 8px solid darkred;
+}
