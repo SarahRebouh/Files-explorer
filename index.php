@@ -34,7 +34,6 @@
             </div>
 
             <div class="corpsfich container col-lg-6">
-                <?php include("file-explore.php"); ?>
             </div>
         </div>
 
