@@ -1,20 +1,37 @@
 <?php
  
-    echo $_SERVER['DOCUMENT_ROOT'];
-    echo "<br>";
+// -------------------------- TEST
 
-    $dir = "/home/sarahr/";
 
-// Open a directory, and read its contents
+//-------------- Fonction qui cherche les dossiers et les affiche
 
-    if (is_dir($dir)){
-    if ($dh = opendir($dir)){
-        while (($file = readdir($dh)) !== false){
-            echo "filename:" . $file . "<br>";
-    }
-    closedir($dh);
+$scan = scandir('/home/sarahr/');
+
+  foreach($scan as $file)
+  {
+      if (!is_dir("/home/sarahr/sarahr/$file"))
+      {
+          echo $file.'<br>';
+      }
+      else{
+        echo $file.'<br>';
+      }
   }
-}
+
+//--------- Fonction à appeler pour chercher dans un dossier précis et sortir les fichiers
+
+$scan = scandir('/home/sarahr/Formulaire/');
+
+  foreach($scan as $file)
+  {
+      if (!is_dir("/home/sarahr/Formulaire/$file"))
+      {
+          echo $file.'<br>';
+      }
+      else{
+        echo $file.'<br>';
+      }
+  }
+
 
 ?>
-
