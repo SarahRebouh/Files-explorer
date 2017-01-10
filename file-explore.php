@@ -1,7 +1,7 @@
 <?php
  
 // -------------------------- TEST
-<<<<<<< HEAD
+
 //-------------- Fonction qui cherche les dossiers et les affiche
 $scan = scandir('/home/sarahr/');
 
@@ -48,7 +48,6 @@ $scan = scandir('/home/sarahr/');
 //echo "$val<br>";
 //}
 //}
-=======
 
 
 //-------------- Fonction qui cherche les dossiers et les affiche
@@ -87,28 +86,28 @@ $scan = scandir('/home/sarahr/jeu-de-la-fourchette/');
 
 //---------------- Fonction pour scanner les dossiers
 
-$vrar = $_GET['/home/sarahr/'];
-
-if(strlen($var)==0){
-
-$var='.';
-
-}
-
-$ar = scandir($var);
-
-while (list ($key, $val) = each ($ar)) {
-
-if (is_dir($val)){
-echo "<a href=scandir.php?/home/sarahr/=$val>$val</a><br>";
-
-}else {
-
-echo "$val<br>";
->>>>>>> master
-
-}
-
-}
+//$vrar = $_GET['/home/sarahr/'];
+//
+//if(strlen($var)==0){
+//
+//$var='.';
+//
+//}
+//
+//$ar = scandir($var);
+//
+//while (list ($key, $val) = each ($ar)) {
+//
+//if (is_dir($val)){
+//echo "<a href=scandir.php?/home/sarahr/=$val>$val</a><br>";
+//
+//}else {
+//
+//echo "$val<br>";
+//
+//
+//}
+//
+//}
 
 ?>
