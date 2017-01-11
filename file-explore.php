@@ -4,7 +4,7 @@
 // -------------------------- Fonction
 
 
-//--- L'adresse est le point de départ 
+//--- L'adresse est le point de départn url de base
 $adresse = '/home/sarahr/';
 
 
@@ -22,36 +22,44 @@ $dirs = scandir($adresse);
   foreach ($dirs as $folder) {
       
       
-//--- Si l'adresse visée n'est pas un dossier, donc est un fichier     
+//--- Si l'adresse visée n'est pas un dossier, alors c'est un fichier     
       if (!is_dir($adresse.$folder)) {
-          
-          
-//--- Si la ligne est ".." alors on affiche une image dossier et on crée un lien vers  A REVOIR        
-          if ($folder ==".."){
-                echo "<img src='images/dossier.png'><a href='index.php?dossier='".$_GET['dossier'].">$folder</a><br>";
-          } 
-          
-
-//--- Sinon
-          else {
+        
   
-//--- Si ma varibale est définie, si elle existe, donc si elle transmet une adresse, on affiche une image dossier et on fait un lien vers l'adresse du dossier en ajoutant le nom du dossier à la fin de l'URL
+//--- Si ma varibale transmet une adresse, on affiche une image dossier et on fait un lien vers l'adresse du dossier en ajoutant le nom du dossier à la fin de l'URL
                     if (isset($_GET['dossier'])){
                         echo "<a href='index.php?dossier='".$_GET['dossier']."$folder/><img src='images/file.png'>$folder</a><br>";
                     }
 
-//--- Et sinon, on reste sur la même adresse
+//--- Et sinon, il nous envoie sur le dossier écrit dans l'adresse
                     else {
                         echo "<a href='index.php?dossier='$folder/><img src='images/file.png'>$folder</a><br>";
                     }
-          
             }
-    }
 
-//--- Sinon on reste sur la même adresse
+//--- Si c'est un dossier, il nous envoie sur le dossier
       
       else {
-        echo "<a href='index.php?dossier=$folder/'><img src='images/dossier.png'>$folder</a><br>";
-    }
+          
+ //--- Si la ligne est == ".." alors on affiche une image retour et on remonte                          
+            if ($folder == ".."){
+                
+                
+                if (isset($_GET['dossier'])){
+                    echo "<img src='images/retour.png'><a href='index.php?dossier=".$_GET['dossier'].$folder."/'>$folder</a><br>";
+                    }
+                
+                else{
+                    echo "<img src='images/retour.png'><a href='index.php'>$folder</a><br>";
+                }
+            } 
+          
+
+          
+            else {
+                echo "<a href='index.php?dossier=$folder/'><img src='images/dossier.png'>$folder</a><br>";
+            }
+        
+      }
   }
 
