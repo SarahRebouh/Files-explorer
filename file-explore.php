@@ -53,11 +53,16 @@ $dirs = scandir($adresse);
                     echo "<img src='images/retour.png'><a href='index.php'>$folder</a><br>";
                 }
             } 
-          
 
           
             else {
+                if (isset($_GET['dossier'])){
+                    echo "<img src='images/dossier.png'><a href='index.php?dossier=".$_GET['dossier'].$folder."/'>$folder</a><br>";
+                    }
+                else {
+                    
                 echo "<a href='index.php?dossier=$folder/'><img src='images/dossier.png'>$folder</a><br>";
+                }
             }
         
       }
