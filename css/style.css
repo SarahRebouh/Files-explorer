@@ -38,6 +38,15 @@
 .corpsfich{
     background-color: white;
     border: 8px solid darkred;
+    height: 200px;
+
 }
 
+.intro{
+    font-size: 120%;
+    text-align: center;
+    background-color: darkgrey;
+    color: white;
+    padding:0.5%;
+}
 

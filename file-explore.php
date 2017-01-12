@@ -29,9 +29,9 @@ $dirs = scandir($adresse);
 //--- Si ma variable transmet une adresse, on affiche une image dossier et on fait un lien vers l'adresse du dossier en ajoutant le nom du dossier à la fin de l'URL
             if (isset($_GET['dossier'])){
 
-                echo "<a href=http://sarahr.marmier.codeur.online/".$_GET['dossier'].$folder."><img src='images/file.png'> $folder</a><br>"; 
+                echo "<a class='link' href=http://sarahr.marmier.codeur.online/".$_GET['dossier'].$folder."><img src='images/file.png'> $folder</a><br>"; 
                 
-                echo "<a download='$folder' href=http://sarahr.marmier.codeur.online/".$_GET['dossier'].$folder."><button type='button' class='btn btn-warning col-lg-12 btn-sm'>Télécharger</button></a>";
+                echo "<a download='$folder' href=http://sarahr.marmier.codeur.online/".$_GET['dossier'].$folder."><button type='button' class='btn btn-primary col-lg-12 btn_sm'>Télécharger</button></a>";
                 
             }
         }
@@ -51,13 +51,13 @@ $dirs = scandir($adresse);
                 else{
                     echo "<a href='index.php'><img src='images/retour.png'> Retour</a><br>";
                 }
-            } 
+             } 
           
             else if ($folder == "."){
-// si la ligne est égale à .. 
+//--- si la ligne est égale à .. 
 
                 echo "<a href='index.php'><img src='images/home.png'> HOME</a><br>";
- // on affiche : imagedossier + lien     
+ //---- on affiche : imagedossier + lien     
             }
                 
             
