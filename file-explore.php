@@ -4,7 +4,7 @@
 // -------------------------- Fonction
 
 
-//--- L'adresse est le point de départn url de base
+//--- L'adresse est le point de départ url de base
 $adresse = '/home/sarahr/';
 
 
@@ -26,12 +26,15 @@ $dirs = scandir($adresse);
       if (!is_dir($adresse.$folder)) {
         
   
-//--- Si ma varibale transmet une adresse, on affiche une image dossier et on fait un lien vers l'adresse du dossier en ajoutant le nom du dossier à la fin de l'URL
-                    if (isset($_GET['dossier'])){
-                        
-                        echo "<a download='$folder' href=http://sarahr.marmier.codeur.online/".$_GET['dossier'].$folder."><img src='images/file.png'> $folder</a><br>";
-                    }
+//--- Si ma variable transmet une adresse, on affiche une image dossier et on fait un lien vers l'adresse du dossier en ajoutant le nom du dossier à la fin de l'URL
+            if (isset($_GET['dossier'])){
+
+                echo "<a href=http://sarahr.marmier.codeur.online/".$_GET['dossier'].$folder."><img src='images/file.png'> $folder</a><br>"; 
+                
+                echo "<a download='$folder' href=http://sarahr.marmier.codeur.online/".$_GET['dossier'].$folder."><button type='button' class='btn btn-warning col-lg-12 btn-sm'>Télécharger</button></a>";
+                
             }
+        }
 
 //--- Si c'est un dossier, il nous envoie sur le dossier
       
