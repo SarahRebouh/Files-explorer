@@ -41,18 +41,18 @@ $dirs = scandir($adresse);
                 
                 
                 if (isset($_GET['dossier'])){
-                    echo "<img src='images/retour.png'><a href='index.php?dossier=".$_GET['dossier'].$folder."/'> Retour</a><br>";
+                    echo "<a href='index.php?dossier=".$_GET['dossier'].$folder."/'><img src='images/retour.png'> Retour</a><br>";
                     }
                 
                 else{
-                    echo "<img src='images/retour.png'><a href='index.php'> Retour</a><br>";
+                    echo "<a href='index.php'><img src='images/retour.png'> Retour</a><br>";
                 }
             } 
           
             else if ($folder == "."){
 // si la ligne est égale à .. 
 
-                echo "<img src='images/home.png'><a href='index.php'> HOME</a><br>";
+                echo "<a href='index.php'><img src='images/home.png'> HOME</a><br>";
  // on affiche : imagedossier + lien     
             }
                 
@@ -61,7 +61,7 @@ $dirs = scandir($adresse);
           
             else {
                 if (isset($_GET['dossier'])){
-                    echo "<img src='images/dossier.png'><a href='index.php?dossier=".$_GET['dossier'].$folder."/'> $folder</a><br>";
+                    echo "<a href='index.php?dossier=".$_GET['dossier'].$folder."/'><img src='images/dossier.png'> $folder</a><br>";
                     }
                 else {
                     
