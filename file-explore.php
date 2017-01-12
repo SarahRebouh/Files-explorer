@@ -28,7 +28,8 @@ $dirs = scandir($adresse);
   
 //--- Si ma varibale transmet une adresse, on affiche une image dossier et on fait un lien vers l'adresse du dossier en ajoutant le nom du dossier à la fin de l'URL
                     if (isset($_GET['dossier'])){
-                        echo "<a href='index.php?dossier='".$_GET['dossier']."$folder/><img src='images/file.png'> $folder</a><br>";
+                        
+                        echo "<a download='$folder' href=http://sarahr.marmier.codeur.online/".$_GET['dossier'].$folder."><img src='images/file.png'> $folder</a><br>";
                     }
             }
 
