@@ -14,10 +14,7 @@
 <body id="file_explore">
     <header class=container>
         <h1 class=titre>Explorateur de fichiers serveur FTP</h1>
-        
-            <div class="intro" col-lg-12>
-                <p class="welcome">Pour visualiser un fichier, cliquez dessus. Pour le télécharger dans le dossier téléchargement de votre ordinateur, cliquez sur le bouton "Télécharger".</p>
-            </div>
+     
             
      </header>
     
@@ -27,11 +24,13 @@
            
             <div class="doss col-xs-5 col-lg-6">
                 <h2>► Dossiers</h2>
+                <p>Entrez dans les dossiers en cliquant dessus.</p>
             </div>
             
 
             <div class="fich col-xs-5 col-lg-6">
-                <h2>► Fichiers</h2>
+                <h2>► Aperçu images</h2>
+                <p>Cliquez sur les images pour les visualiser.</p>
             </div>
             
         </div>
@@ -58,9 +57,6 @@
             e.preventDefault();
                     
             var adresse = $(this).attr("href");
-//            
-//            var splitadresse = adresse.split('/');
-        
           
             $.ajax({
             type : "GET",

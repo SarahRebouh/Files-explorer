@@ -3,9 +3,9 @@
     background-color: darkred;
     color:white;
     padding-top: 1%;
-    padding-bottom: 1%;
-    
+    padding-bottom: 1%; 
 }
+
 
 .all{
     background-color: darkgrey;
@@ -36,12 +36,9 @@
 }
 
 main .corpsfich{
-    border: 8px solid darkred;
     height: 100%;
-    
-
-    
-
+    margin-top: 2%;
+    border:8px solid darkred;
 }
 
 .intro{
@@ -51,4 +48,12 @@ main .corpsfich{
     color: white;
     padding:0.5%;
 }
-
+.salut{
+    color:white;
+    font-size: 120%;
+    font-weight: bold;
+}
+.style{
+   font-weight: bold;
+    color: black;
+}
