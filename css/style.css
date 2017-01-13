@@ -35,10 +35,12 @@
     border:8px solid darkred;
 }
 
-.corpsfich{
-    background-color: white;
+main .corpsfich{
     border: 8px solid darkred;
-    height: 200px;
+    height: 100%;
+    
+
+    
 
 }
 

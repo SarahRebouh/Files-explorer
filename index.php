@@ -48,7 +48,8 @@
 
     </main>
     
-
+<!---------------- -Script pour ajax ----------------->
+   
     <script type="text/javascript">
             
     $(document).ready(function(){
@@ -56,13 +57,15 @@
         $(".link").on("click", function(e){
             e.preventDefault();
                     
-            var $x = $(this);
-            var adresse = $x.attr("href");
-            var splitadresse = adresse.split('?')[1];
+            var adresse = $(this).attr("href");
+//            
+//            var splitadresse = adresse.split('/');
+        
           
             $.ajax({
             type : "GET",
-            data: splitadresse,
+            data: "donnees="+adresse,
+            url: "script.php",
             success : function(data){
                     $("#ajax").html(data);
                     }
