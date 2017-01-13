@@ -10,7 +10,9 @@ echo ".",$exp[0];
 $extension = ".".$exp[0]; //Je crée une variable  = .jpg.png...
 
     if ($url !==null){
-        if ($extension == ".png" || $extension == ".jpg" || $extension == ".jpeg"){
+        
+        if ($extension == ".png" || $extension == ".jpg" || $extension == ".jpeg" || $extension == ".gif" || $extension == ".svg"){
         echo "<img src='".$url."'>";    
         }
+        
     }
